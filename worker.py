@@ -1,4 +1,3 @@
-import nltk
 import random
 import os
 
@@ -25,8 +24,13 @@ MODEL_INFO_LOG_MSGS = [
     "downloading",
 ]
 
-nltk.download("words")
-WORD_LIST = nltk.corpus.words.words()
+WORD_LIST = (
+    "the quick brown fox jumps over lazy dog time work code data model "
+    "system process function value error handle request response server "
+    "client user file text word list array object number string boolean "
+    "network memory thread queue stack loop condition variable module "
+    "package import export return call define class method field type"
+).split()
 
 
 def request_parser(request):
